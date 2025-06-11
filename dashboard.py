@@ -42,7 +42,6 @@ def add_bg_from_local(image_file):
         .stPlotlyChart > div {{
             background-color: rgba(0,0,0,0) !important;
         }}
-        /* Removido qualquer outro estilo que altere cores de texto */
         .stTitle, .stHeader, .stSubheader, .markdown-text-container, 
         h1, h2, h3, h4, h5, h6 {{
             color: black !important;
@@ -85,11 +84,25 @@ if filtro_pais != 'Todos':
 if filtro_ano != 'Todos':
     df_filtrado = df_filtrado[df_filtrado['data_mes'] == filtro_ano]
 
+# Paleta vibrante com máxima variedade
 paleta_vibrante = [
-    "#6cb4b1", "#ff8c6a", "#77d5a2", "#ff8ba7", "#9e6fd9",
-    "#f7a3d2", "#ffff80", "#98f0c5", "#b3e0a0", "#5ec3ff",
-    "#ff8cb5", "#e4f2a7", "#f9a99e", "#d0b7d9", "#7bbdfb",
+    "#6cb4b1",  # azul turquesa vibrante
+    "#ff8c6a",  # pêssego saturado
+    "#77d5a2",  # verde menta mais vivo
+    "#ff8ba7",  # rosa claro intenso
+    "#9e6fd9",  # lilás forte
+    "#f7a3d2",  # rosa lavanda saturado
+    "#ffff80",  # amarelo claro mais vibrante
+    "#98f0c5",  # verde água forte
+    "#b3e0a0",  # verde menta acinzentado mais forte
+    "#5ec3ff",  # azul claro brilhante
+    "#ff8cb5",  # rosa chiclete intenso
+    "#e4f2a7",  # verde limão mais saturado
+    "#f9a99e",  # laranja rosado mais forte
+    "#d0b7d9",  # cinza rosado com mais cor
+    "#7bbdfb",  # azul céu intenso
 ]
+
 
 # VISÃO GERAL DO MERCADO
 if aba == "📊 Visão Geral do Mercado":
@@ -166,7 +179,7 @@ elif aba == "📈 Engajamento":
     ax.set_facecolor('none')
     fig3.patch.set_alpha(0.0)
     ax.set_title("Boxplot: Tempo Assistido", color='black')
-    ax.tick_params(colors='black', labelcolor='black')  # texto dos ticks preto
+    ax.tick_params(colors='black')
     ax.xaxis.label.set_color('black')
     ax.yaxis.label.set_color('black')
     st.pyplot(fig3)
@@ -207,7 +220,7 @@ elif aba == "⭐ Satisfação do Usuário":
     ax.set_facecolor('none')
     fig3.patch.set_alpha(0.0)
     ax.set_title("Boxplot: Avaliação por Plataforma", color='black')
-    ax.tick_params(colors='black', labelcolor='black')
+    ax.tick_params(colors='black')
     ax.xaxis.label.set_color('black')
     ax.yaxis.label.set_color('black')
     st.pyplot(fig3)
