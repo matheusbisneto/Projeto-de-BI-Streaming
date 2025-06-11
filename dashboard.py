@@ -22,20 +22,17 @@ def add_bg_from_local(image_file):
         }}
         [data-testid="stSidebar"] {{
             background-color: #84c2cd;
-            color: black;
         }}
         [data-testid="stSidebar"] * {{
             color: black !important;
         }}
         .stSelectbox div, .stRadio > div {{
             background-color: rgba(255, 255, 255, 0.1) !important;
-            color: black !important;
         }}
         .css-18e3th9 {{
             background-color: rgba(255,255,255,0.1) !important;
             border-radius: 10px;
             padding: 10px;
-            color: black !important;
         }}
         .st-bb {{
             background-color: rgba(255,255,255,0.1) !important;
