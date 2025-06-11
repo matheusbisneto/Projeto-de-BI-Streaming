@@ -198,9 +198,15 @@ elif aba == "⭐ Satisfação do Usuário":
             title="Avaliação Média", labels={"avaliacao_usuario": "Nota Média"},
             color_discrete_sequence=paleta_vibrante
         )
-        fig.update_layout(paper_bgcolor='rgba(0,0,0,0)',
-                          plot_bgcolor='rgba(0,0,0,0)', font_color='black')
-        st.plotly_chart(fig, use_container_width=True)
+        fig.update_layout(
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='black'),
+    title_font=dict(color='black'),
+    legend=dict(font=dict(color='black')),
+    xaxis=dict(title_font=dict(color='black'), tickfont=dict(color='black')),
+    yaxis=dict(title_font=dict(color='black'), tickfont=dict(color='black'))
+)
 
     with col2:
         st.subheader("Correlação: Tempo vs Avaliação")
